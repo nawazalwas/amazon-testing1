@@ -7,7 +7,7 @@ import Order from './Order.js';
 
 function Orders() {
     const [{ cart, user }, dispatch] = AmazonUseContext();
-    const [orders, setOrders] = useState({});
+    const [orders, setOrders] = useState([]);
 
 
     useEffect(() => {
@@ -20,14 +20,16 @@ function Orders() {
                 const orders = collection(userId, 'orders');
                 
                 const q = query(orders, orderBy('created', 'desc'));
-                const querySnapshot = await getDocs(orders).then(res => {
-                    const temp = {};
-                    res.forEach((doc) => {
-                        temp[doc.id] = doc.data();
+                const querySnapshot = await getDocs(q).then(res => {
+                    const data = [];
+                    res.forEach((doc)=>{
+                        data.push(doc.data());
                     });
-                    setOrders({...temp});
+                    setOrders([...data]);
+                    
                     
                 });
+                
             }
 
             getDbHandler();
@@ -43,8 +45,8 @@ function Orders() {
             <h1>Your Orders</h1>
 
             <div className='orders__order'>
-                {orders&& Object.keys(orders).map((order,idx) => (
-                    <Order key={idx} order={orders[order]} />
+                {orders&& orders.map((order,idx) => (
+                    <Order key={idx} {...order} />
                 ))}
                 
             </div>
