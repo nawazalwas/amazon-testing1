@@ -4,10 +4,10 @@ import './Title.css';
 
 function Title({title,className,id}) {
   return (
-    <Link className='link' to={{
+    <Link className={className + ' link'} to={{
         pathname: `/product/${id}`,
       }}>
-        <p className={className}>{title}</p>
+        <p>{title}</p>
       </Link>
     
   )

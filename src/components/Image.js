@@ -1,15 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Image.css';
 
 function Image({image,className,id}) {
+  const navigate = useNavigate();
   return (
-    <Link to={{
-        pathname: `/product/${id}`,
-      }}>
-        <img src={image} alt=""  className={className}/>
-      </Link>
-    
+        <img onClick={()=>{navigate(`/product/${id}`)}} src={image} alt=""  className={className}/>
   )
 }
 

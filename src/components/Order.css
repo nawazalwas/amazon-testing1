@@ -5,12 +5,22 @@
     background-color: white;
     position: relative;
 }
+.order_info{
+  display: flex;
+  justify-content: space-between;
 
+  
+}
+.order_time{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .order__id {
-    position: absolute;
-    top: 40px;
-    right: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
 .order__payment__id{
   
@@ -19,5 +29,10 @@
 .order__total {
     font-weight: 500;
     text-align: right;
+  }
+
+  @media screen and (max-width:600px) {
+    
+    
   }
   

@@ -2,12 +2,11 @@
     display: flex;
     margin: 0 20px;
     margin-top: 20px;
-    min-width: 560px;
     
 }
 .checkoutproduct_image{
     object-fit: contain;
-    width: 180px;
+    width:180px;
     height: 180px;
     background-color: white;
 }
