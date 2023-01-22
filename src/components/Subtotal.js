@@ -1,5 +1,5 @@
 import React from 'react';
-import CurrencyFormat from 'react-currency-format';
+import { NumberFormatBase } from 'react-number-format';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { getBasketTotal } from './Reducer';
 import { AmazonUseContext } from './StateProvider';
@@ -13,29 +13,30 @@ function Subtotal() {
     const paymentPageRender = () => {
         if (user) {
             navigate('/payment', {
-                state : {
-                    previousUrl : location.pathname,
+                state: {
+                    previousUrl: location.pathname,
                 }
-            }) 
+            })
 
         } else {
             navigate('/login', {
-                state : {
-                    previousUrl : location.pathname,
+                state: {
+                    previousUrl: location.pathname,
                 }
-            }) 
+            })
 
         }
     }
 
     return (
         <div className='subtotal'>
-            <CurrencyFormat
+            
+            <NumberFormatBase
                 renderText={(value) => (
                     <>
                         <p>
                             {/* Part of the homework */}
-                            Subtotal ({Object.keys(cart).length} items): <strong>{value}</strong>
+                            Subtotal ({Object.keys(cart).length} items): <strong>${value}</strong>
                         </p>
                         <small className="subtotal_gift">
                             <input type="checkbox" /> This order contains a gift
@@ -46,8 +47,9 @@ function Subtotal() {
                 value={getBasketTotal(cart)} // Part of the homework
                 displayType={"text"}
                 thousandSeparator={true}
-                prefix={"$"}
+                
             />
+            
             <button
                 className='subtotal_button'
                 onClick={paymentPageRender}

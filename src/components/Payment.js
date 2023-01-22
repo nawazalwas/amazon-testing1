@@ -4,11 +4,11 @@ import { AmazonUseContext } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 import { Link, useNavigate } from "react-router-dom";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./Reducer";
 import axios from './axios';
 import { db } from "./firebase";
 import { collection, addDoc, doc } from "firebase/firestore";
+import { NumberFormatBase } from 'react-number-format';
 
 function Payment() {
     const [{ cart, user }, dispatch] = AmazonUseContext();
@@ -142,15 +142,15 @@ function Payment() {
                             <CardElement onChange={handleChange} />
 
                             <div className='payment__priceContainer'>
-                                <CurrencyFormat
+
+                                <NumberFormatBase
                                     renderText={(value) => (
-                                        <h3>Order Total: {value}</h3>
+                                        <h3>Order Total: ${value}</h3>
                                     )}
                                     decimalScale={2}
                                     value={getBasketTotal(cart)}
                                     displayType={"text"}
                                     thousandSeparator={true}
-                                    prefix={"$"}
                                 />
                                 <button disabled={processing || disabled || succeeded}>
                                     <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
