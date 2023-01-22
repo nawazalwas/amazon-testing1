@@ -4,7 +4,7 @@ import { AmazonUseContext } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 import { Link, useNavigate } from "react-router-dom";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-/* import CurrencyFormat from "react-currency-format"; */
+import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./Reducer";
 import axios from './axios';
 import { db } from "./firebase";
@@ -142,7 +142,7 @@ function Payment() {
                             <CardElement onChange={handleChange} />
 
                             <div className='payment__priceContainer'>
-                                {/* <CurrencyFormat
+                                <CurrencyFormat
                                     renderText={(value) => (
                                         <h3>Order Total: {value}</h3>
                                     )}
@@ -151,7 +151,7 @@ function Payment() {
                                     displayType={"text"}
                                     thousandSeparator={true}
                                     prefix={"$"}
-                                /> */}
+                                />
                                 <button disabled={processing || disabled || succeeded}>
                                     <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                                 </button>
