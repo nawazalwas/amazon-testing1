@@ -1,7 +1,9 @@
 .checkoutproduct{
     display: flex;
+    margin: 0 20px;
     margin-top: 20px;
-    min-width: 600px;
+    min-width: 560px;
+    
 }
 .checkoutproduct_image{
     object-fit: contain;
