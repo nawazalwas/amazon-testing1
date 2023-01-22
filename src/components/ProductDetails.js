@@ -10,7 +10,7 @@ function ProductDetails() {
     const [details, setDetails] = useState();
     const [{ user, cart }, dispatch] = AmazonUseContext();
     const navigate = useNavigate();
-    const {id} = useParams();
+    const { id } = useParams();
     useEffect(() => {
         axios.get(`${baseURL}/${id}`).then((response) => {
             setDetails({ ...response.data, quantity: 1 });
@@ -44,61 +44,64 @@ function ProductDetails() {
 
     return details && (
         <div className='productdetails'>
+            <div className="productdetails_container">
+                <div className='productdetails_left'>
+                    <img
+                        className='productdetails_image'
+                        src={details?.image}
+                        alt=''
+                    />
+                </div>
+                <div className='productdetails_right'>
+                    <div className='productdetails_info'>
+                        <h1 className='productdetails_title'>{details?.title}</h1>
+                        <p className='productdetails_category'>in {details?.category}</p>
 
-            <div className='productdetails_left'>
-                <img
-                    className='productdetails_image'
-                    src={details?.image}
-                    alt=''
-                />
-            </div>
-            <div className='productdetails_right'>
-                <div className='productdetails_info'>
-                    <h1 className='productdetails_title'>{details?.title}</h1>
-                    <p className='productdetails_category'>in {details?.category}</p>
-
-                    <p className='productdetails_price'>
-                        <small className='productdetails_price_currency'>$</small>
-                        <strong className='productdetails_price_value'>{details?.price}</strong>
-                    </p>
-                    <div className='productdetails_rating'>
-                        {details && Array(Math.floor(details?.rating.rate - 0))
-                            .fill()
-                            .map((_, i) => (
-                                <p key={i}>🌟</p>
-                            ))}
+                        <p className='productdetails_price'>
+                            <small className='productdetails_price_currency'>$</small>
+                            <strong className='productdetails_price_value'>{details?.price}</strong>
+                        </p>
+                        <div className='productdetails_rating'>
+                            {details && Array(Math.floor(details?.rating.rate - 0))
+                                .fill()
+                                .map((_, i) => (
+                                    <p key={i}>🌟</p>
+                                ))}
+                        </div>
+                        <div className='productdetails_post'>{details?.rating.count}</div>
                     </div>
-                    <div className='productdetails_post'>{details?.rating.count}</div>
-                </div>
-                <div className='checkoutproduct_quantity'>
-                    <button
-                        className='checkoutproduct_quantity_increment'
-                        onClick={() => { details && setDetails({ ...details, quantity: details?.quantity + 1 }) }}
-                    >+</button>
+                    <div className='checkoutproduct_quantity'>
+                        <button
+                            className='checkoutproduct_quantity_increment'
+                            onClick={() => { details && setDetails({ ...details, quantity: details?.quantity + 1 }) }}
+                        >+</button>
 
-                    <input
-                        className='checkoutproduct_quantity_input'
-                        value={details?.quantity}
-                        disabled />
+                        <input
+                            className='checkoutproduct_quantity_input'
+                            value={details?.quantity}
+                            disabled />
 
-                    <button
-                        className='checkoutproduct_quantity_decrement'
-                        onClick={() => { details && setDetails({ ...details, quantity: details?.quantity - 1 }) }}
-                        disabled={details?.quantity === 1 ? true : false}
-                    >-</button>
+                        <button
+                            className='checkoutproduct_quantity_decrement'
+                            onClick={() => { details && setDetails({ ...details, quantity: details?.quantity - 1 }) }}
+                            disabled={details?.quantity === 1 ? true : false}
+                        >-</button>
 
-                </div>
-                <div className='productdetails_btn'>
-                    <Link to={'/checkout'}>
-                        <button className='productdetails_buynow_btn' onClick={buyNow}>Buy now</button>
-                    </Link>
-                    <button className='productdetails_addcart_btn' onClick={addToBasket}>Add to cart</button>
-                </div>
-                <div className='productdetails_description'>
-                    <h3>Description :</h3>
-                    <p>{details?.description}</p>
+                    </div>
+                    <div className='productdetails_btn'>
+                        <Link to={'/checkout'}>
+                            <button className='productdetails_buynow_btn' onClick={buyNow}>Buy now</button>
+                        </Link>
+                        <button className='productdetails_addcart_btn' onClick={addToBasket}>Add to cart</button>
+                    </div>
+                    <div className='productdetails_description'>
+                        <h3>Description :</h3>
+                        <p>{details?.description}</p>
+                    </div>
                 </div>
             </div>
+
+
 
         </div>
     )
