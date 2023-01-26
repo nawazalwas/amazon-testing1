@@ -43,6 +43,7 @@
     border: 1px solid;
     border-color: #a88734 #9c7e31 #846a29;
     text-align: center;
+    padding:2px;
 }
 .checkoutproduct_remove_btn{
     background-color: #f0c14b;
