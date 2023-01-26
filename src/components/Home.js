@@ -39,15 +39,12 @@ function Home() {
     }, []);
     return products && (
         <div className='home'>
-            <Carousel className='home_banner' infiniteLoop autoPlay>
+            <Carousel className='home_banner' infiniteLoop={true} autoPlay showStatus = {false} showThumbs={false}>
                 <div>
                     <img src={imgArr[0]} />
                 </div>
                 <div>
                     <img src={imgArr[1]} />
-                </div>
-                <div>
-                    <img src={imgArr[0]} />
                 </div>
             </Carousel>
             {/* <img

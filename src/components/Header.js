@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 import { AmazonUseContext } from './StateProvider';
 import { auth } from './firebase.js';
-import { SearchOff, ShoppingCartOutlined } from '@mui/icons-material';
+import { Search, SearchOff, ShoppingCartOutlined } from '@mui/icons-material';
 import { signOut } from "firebase/auth";
 
 function Header() {
@@ -24,7 +24,7 @@ function Header() {
       </Link>
       <div className='header_search'>
         <input typte="text" className='header_search_input' />
-        <SearchOff className='header_search_icon' />
+        <Search className='header_search_icon' />
       </div>
       <div className='header_nav' >
         <Link to={!user && '/login'} className='header_link'>

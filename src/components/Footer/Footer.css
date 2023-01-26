@@ -9,9 +9,29 @@
     padding: 0 0 7px 0;
 
 }
-.footer a:visited{
-    color: #004B91;
+
+.footer_backToTop{
+    color: white;
     text-decoration: none;
+
+}
+
+.footer_backToTop:hover{
+    cursor: pointer;
+}
+.footer_backToTop_inner{
+    margin-bottom: 40px;
+    background-color: #37475A;
+
+}
+.footer_backToTop_text{
+    display: block;
+    text-align: center;
+    /* color: #111; */
+    padding: 15px 0;
+    line-height: 19px;
+    font-size: 13px;
+    
 }
 
 .footer_table {
@@ -19,6 +39,16 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px 0px;
+}
+
+.footer_table a:visited{
+    color: #004B91;
+    text-decoration: none;
+}
+
+.footer_table a:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .footer_row_1 {

@@ -3,16 +3,25 @@ import './Footer.css';
 import FooterCategory from './FooterCategory';
 
 function Footer() {
-  const [footer, setFooter] = useState([{ title: "Get to know us", item: [{ title: "About Us" },{ title: "Careers" }, { title: "Press Releases" }, { title: "Amazon Science" }] },
+  const [footer, setFooter] = useState([{ title: "Get to know us", item: [{ title: "About Us" }, { title: "Careers" }, { title: "Press Releases" }, { title: "Amazon Science" }] },
   { title: "Connect with Us", item: [{ title: "Facebook" }, { title: "Twitter" }, { title: "Instagram" }] },
-  { title: "Make Money with Us", item: [{ title: "Sell on Amazon" }, { title: "Sell under Amazon Accelerator" }, { title: "Protect and Build Your Brand" },{ title: "Amazon Global Selling" },{ title: "Become an Affiliate" },{ title: "Fulfilment by Amazon" },{ title: "Advertise Your Products" },{ title: "Amazon Pay on Merchants" }] },
-  { title: "Let Us Help You", item: [{ title: "COVID-19 and Amazon" }, { title: "Your Account" }, { title: "Returns Centre" },{ title: "100% Purchase Protection" }, { title: "Amazon App Download" }, { title: "Amazon Assistant Download" },{ title: "Help" }] },
+  { title: "Make Money with Us", item: [{ title: "Sell on Amazon" }, { title: "Sell under Amazon Accelerator" }, { title: "Protect and Build Your Brand" }, { title: "Amazon Global Selling" }, { title: "Become an Affiliate" }, { title: "Fulfilment by Amazon" }, { title: "Advertise Your Products" }, { title: "Amazon Pay on Merchants" }] },
+  { title: "Let Us Help You", item: [{ title: "COVID-19 and Amazon" }, { title: "Your Account" }, { title: "Returns Centre" }, { title: "100% Purchase Protection" }, { title: "Amazon App Download" }, { title: "Amazon Assistant Download" }, { title: "Help" }] },
   ]);
   return (
     <div className="footer">
+      <a className='footer_backToTop' href='#'>
+        <div className='footer_backToTop_inner'>
+          <span className='footer_backToTop_text'>
+
+            Back to top
+
+          </span>
+        </div>
+      </a>
       <div className="footer_table">
         <div className="footer_row_1">
-          {footer.map((list,idx) => {
+          {footer.map((list, idx) => {
             return (
               <FooterCategory key={idx} title={list.title} item={list.item} />
             );
