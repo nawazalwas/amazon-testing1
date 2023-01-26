@@ -15,6 +15,11 @@
 
 }
 
+.product:hover{
+    transform: scale(1.05);
+    z-index: 90;
+}
+
 .product_info {
     height: 100px;
     margin-bottom: 15px;

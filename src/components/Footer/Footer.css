@@ -1,0 +1,191 @@
+.footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    background-color: #232F3E;
+    color: #FFF;
+    min-width: 1000px;
+    position: relative;
+    margin: 0px 0 8px 0;
+    padding: 0 0 7px 0;
+
+}
+.footer a:visited{
+    color: #004B91;
+    text-decoration: none;
+}
+
+.footer_table {
+    display: table;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 0px;
+}
+
+.footer_row_1 {
+    display: table-row;
+
+}
+
+.footer_column_item {
+    display: table-cell;
+    padding: 0 10px;
+    line-height: 120%;
+    vertical-align: top;
+}
+
+.footer_column_name {
+    font-family: inherit;
+    font-size: 16px;
+    margin: 6px 0 14px 0;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.footer_column_list {
+    padding: 0;
+    margin: 0;
+}
+
+.footer_column_list_item {
+    margin: 0 0 10px;
+    list-style-type: none;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+.footer_column_list_link {
+    color: #DDD;
+    text-decoration: none;
+    white-space: normal;
+}
+
+.footer_column_spacer {
+    display: table-cell;
+    width: 10%;
+}
+
+.footer_line {
+    border-top: 1px solid #3a4553;
+    margin-top: 40px;
+}
+
+.footer_padding_item {
+    font-family: inherit;
+    font-size: 11px;
+    text-align: center;
+    color: #DDD;
+    line-height: 18px;
+    white-space: nowrap;
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+.footer_padding_item  *{
+    font-family: inherit;
+}
+
+.footer_padding_item  span{
+    white-space: normal;
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 0.6em;
+}
+
+.footer_padding_item_logo {
+}
+
+.footer_padding_item_logo_inner {
+    font-size: 12px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 30px auto 15px;
+    line-height: 0;
+    color: #DDD;
+    white-space: nowrap;
+}
+
+
+
+.footer_padding_item_logo_link {
+    padding: 0 0.6em;
+    
+}
+
+.footer_padding_item_logo_img {
+    width: 76px;
+    height: 23px;
+    margin: 0 auto;
+    background-image: url(https://m.media-amazon.com/images/G/01/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405937547_.png);
+    background-position: -10px -90px;
+    background-repeat: repeat-x;
+}
+
+.footer_padding_item_input {
+    vertical-align: top;
+    margin: 18px auto 0;
+    margin-left: 70px;
+    padding: 0 0.6em;
+    
+    
+}
+
+.footer_padding_item_input_container {
+    font-size: 11px;
+    color: #DDD;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    white-space: nowrap;
+}
+
+.footer_padding_item_input_link {
+    
+    color: #004B91;
+    text-decoration: none;
+    display: inline-block !important;
+    border: 1px solid #848688;
+    border-radius: 3px;
+    padding: 6px 18px 6px 8px;
+    font-size: 13px;
+    margin-right: 4px;
+}
+
+
+
+.footer_padding_item_input_option {
+    color: #CCC;    
+}
+
+.symbol{
+    position: relative;
+    background: url(https://m.media-amazon.com/images/S/sash/fe2UeLQmJ11kKHN.png);
+    display: inline-block;
+}
+
+.footer_padding_item_input_language_logo {
+    background-position: -77px -24px;
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    left: 0;
+}
+
+.footer_padding_item_input_arrow {
+    background-position: -77px -80px;
+    width: 12px;
+    height: 12px;
+    left: 12px;
+}
+.footer_padding_item_input_currency_logo{
+    color: #fff;
+    padding: 0;
+    margin: 3px 0 0;
+    display: inline-block;    
+}
+.footer_padding_item_input_flag_logo{
+    background-position: -54px -108px;
+    margin: 3px 0 0;
+    width: 18px;
+    height: 12px;    
+    top: 2px;
+}

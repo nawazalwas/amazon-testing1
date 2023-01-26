@@ -1,7 +1,10 @@
 .home{
-    min-width: 600px;
+    min-width: 1000px;
+    padding-bottom: 50px;
 
 }
+
+
 
 .home_banner{
     width: 100%;

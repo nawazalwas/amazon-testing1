@@ -1,0 +1,254 @@
+.description{
+    box-sizing: border-box;
+    padding: 0;
+    min-width: 1000px;
+    background-color: white;
+    padding: 50px 0px;
+
+
+}
+.description_row {
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 1000px;
+    margin-left: 10px;
+
+}
+
+.description_col {
+    flex-basis: 45%;
+    margin-left: 10px;
+}
+
+.description_slider {
+    height: 80vh;
+    display: flex;
+    margin-top: 40px;
+}
+
+.description_product {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.description_product_image {
+    height: 100px;
+    width: 80px;
+    margin-bottom: 9px;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 1px solid #c5d2e1;
+    border-radius: 2px;
+}
+
+.description_product_image:hover {
+    opacity: 1;
+    box-shadow: 0px 0px 5px 3px #c5d2e1;
+}
+
+.description_preview{
+    margin-left: 10px;
+    /* height: 600px; */
+    width: 500px;
+}
+
+.description_preview img {
+    height: 100%;
+    width: 100%;
+}
+
+.details {
+    margin-left: 20px;
+}
+
+.description_content {
+    display: flex;
+    flex-direction: column;
+    /* height: 500px; */
+}
+
+.description_brand {
+    color: #95969b;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.description_brand_name {
+    color: #ff7100;
+}
+
+.description_title {
+    color: #020202;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.description_price {
+    color: #020202;
+    margin-bottom: 10px;
+}
+
+.description_price_currency {
+    vertical-align: super;
+}
+
+.description_price_integer {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.description_price_decimal {
+    vertical-align: super;
+}
+
+.description_price_stock {
+    color: #12af40;
+    vertical-align: super;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+.description_rating {
+    margin-bottom: 15px;
+}
+
+.description_rating_star {
+    display: inline-block;
+    color: #ffb600;
+}
+
+.description_post {
+    display: inline-block;
+    color: #69809d;
+    margin-left: 5px;
+}
+
+.description_post_arrow {
+    display: inline-block;
+}
+
+.description_post_number {
+    font-size: 14px;
+}
+
+.description_size {
+    margin-bottom: 15px;
+}
+
+.description_size_type {
+    margin-bottom: 10px;
+}
+
+.description_size_option {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    align-items: center;
+    column-gap: 5px;
+    row-gap: 5px;
+    font-size: 15px;
+    word-spacing: -2px;
+    font-weight: 500;
+    /* justify-content: center; */
+}
+
+.description_size_option_value {
+    display: inline-block;
+    border: 1px solid #eef3f9;
+    padding: 7px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.description_quantity {
+    margin-bottom: 15px;
+}
+
+.description_quantity_title{
+    margin-bottom: 10px;
+
+}
+
+.description_quantity_btn{
+    
+}
+
+.description_quantity_increment,.description_quantity_decrement{
+    background-color: #ffb600;
+    border: 1px solid #ffb600;
+    width: 20px;
+    border: none;
+    padding: 2px;
+
+}
+.description_quantity_increment{
+
+}
+
+.description_quantity_input{
+    width: 20px;
+    border: 1px solid;
+    border-color: #ffb600;
+    text-align: center;
+    margin: 0 3px;
+
+}
+
+.description_quantity_decrement{
+
+}
+
+.description_button {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.description_button_addCart {
+    background-color: #ffb600;
+    padding: 10px 0px;
+    margin-right: 20px;
+    width: 170px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 800;
+    border: none;
+}
+
+.description_button_buyNow {
+    background-color: #ff8500;
+    padding: 10px 0px;
+    width: 170px;
+    /* margin-right: 20px; */
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: 800;
+}
+
+.description_line {
+    height: 2px;
+    margin-bottom: 15px;
+    background: #eaf0f7;
+}
+
+.description_para {}
+
+.selected{
+    opacity: 1;
+    box-shadow: 0px 0px 5px 3px #c5d2e1;
+}
+
+.outStock{
+    background-color: #c5d2e13b;
+    color: #b9bec5;
+}
+
+.selected_size{
+    background-color: #ff8500;
+    color: white;
+}
